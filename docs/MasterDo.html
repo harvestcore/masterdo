@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>MasterDo.js</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <link rel="stylesheet" media="all" href="docco.css" />
+</head>
+<body>
+  <div id="container">
+    <div id="background"></div>
+    
+    <ul class="sections">
+        
+          <li id="title">
+              <div class="annotation">
+                  <h1>MasterDo.js</h1>
+              </div>
+          </li>
+        
+        
+        
+        <li id="section-1">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-1">&#182;</a>
+              </div>
+              
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="hljs-keyword">import</span> { v4 <span class="hljs-keyword">as</span> UUID } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;uuid&#x27;</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MasterDo</span> </span>{
+    <span class="hljs-comment">/**
+     * MasterDo constructor.
+     * <span class="hljs-doctag">@param <span class="hljs-type">{Object}</span>   </span>params MasterDo parameters.
+     * <span class="hljs-doctag">@param <span class="hljs-type">{Date}</span>     </span>params.deadline Deadline for this task.
+     * <span class="hljs-doctag">@param <span class="hljs-type">{string}</span>   </span>params Short description of this task
+     * <span class="hljs-doctag">@param <span class="hljs-type">{string}</span>   </span>params Any related link to this task.
+     * <span class="hljs-doctag">@param <span class="hljs-type">{boolean}</span>  </span>params.inProgress The task is in progress or not.
+     * <span class="hljs-doctag">@param <span class="hljs-type">{boolean}</span>  </span>params.done The task is done or not.
+     */</span>
+    <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">{
+        deadline = <span class="hljs-built_in">Date</span>.now(),
+        task,
+        link = <span class="hljs-string">&quot;&quot;</span>,
+        inProgress = <span class="hljs-literal">false</span>,
+        done = <span class="hljs-literal">false</span>
+    }</span>)</span> {
+        <span class="hljs-built_in">this</span>.id = UUID();
+        <span class="hljs-built_in">this</span>.deadline = deadline;
+        <span class="hljs-built_in">this</span>.task = task;
+        <span class="hljs-built_in">this</span>.link = link;
+        <span class="hljs-built_in">this</span>.inProgress = inProgress;
+        <span class="hljs-built_in">this</span>.done = done;
+    }
+}</pre></div></div>
+            
+        </li>
+        
+    </ul>
+  </div>
+</body>
+</html>
