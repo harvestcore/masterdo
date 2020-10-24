@@ -17,22 +17,26 @@ module.exports = class MasterDo {
         inProgress = false,
         done = false
     }) {
-        this._id = UUID();
-        this.deadline = deadline;
-        this.task = task;
-        this.link = link;
-        this.inProgress = inProgress;
-        this.done = done;
+        this._id = task ? UUID() : null;
+        if (this._id) {
+            this.deadline = deadline;
+            this.task = task;
+            this.link = link;
+            this.inProgress = inProgress;
+            this.done = done;
+        }
     }
 
     json() {
-        return {
+        return this._id ? {
             _id: this._id,
             deadline: this.deadline,
             task: this.task,
             link: this.link,
             inProgress: this.inProgress,
             done: this.done,
-        }
+        } : {
+            _id: null
+        };
     }
 }
