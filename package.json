@@ -1,0 +1,18 @@
+{
+  "name": "masterdo",
+  "version": "0.0.1",
+  "description": "Tasks you need to do in your master's degree",
+  "main": "main.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/harvestcore/masterdo"
+  },
+  "author": "Ángel Gómez Martín",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "sqlite": "^4.0.15"
+  }
+}
